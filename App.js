@@ -45,12 +45,11 @@
      super(props);
      this.state = {
         text: '0h 15m 00s',
-        sessionInProgress: false,
-        
+        sessionInProgress: false,      
     }
 }
 
-// Zatrzymanie dźwięków oraz wyłączenie slidera za pomoca przycisku "Begin Sesion"
+// Stopping sounds and turning off the slider using the "Begin Session" button
 options() {
     this.sound.stop(),
     this.sound2.stop()
@@ -116,11 +115,9 @@ addTimer = () => {
      this.setState({
          text: displayTimer
      }) 
-    
  }
  
-
-// Obługa licznika - timer operation
+// Timer operation
 
  resetTimer () {
      this.setState({
@@ -129,8 +126,7 @@ addTimer = () => {
     })
 }
 
-
-// Obługa licznika - timer operation
+// Timer operation
  startTimer () {
         currSeconds 
      
@@ -158,8 +154,7 @@ addTimer = () => {
         let displayTimer = `${Math.floor(hours)}h ${minute}m ${secondHand}s`
         // let displayTimer = `${Math.floor(hours)}h ${Math.floor(minute/60)}m ${secondHand}s`
        
-      
-        // Czas wyświetlany na ekranie telefon - Displaying time the smartphone screen
+        // Displaying time the smartphone screen
         this.setState({
             text: displayTimer
         })
@@ -172,7 +167,6 @@ addTimer = () => {
         minute--
     }, 1000);  
 }
-
 
 beginSession = () => {
     this.startTimer()
@@ -193,7 +187,6 @@ stopSession = () => {
         sessionInProgress: false
     })   
 }
-
 
 // Regulacja głośności  - 
      changeVolume = (value) => {
@@ -654,9 +647,7 @@ render() {
                                 minimumTrackTintColor = "#FFFFFF" 
                                 maximumTrackTintColor = "#424242"
                                 thumbTintColor = "#FFFFFF"
-                                value={1} />
-
-                            
+                                value={1} />    
                         </View>
                     
                         <View>
@@ -680,8 +671,7 @@ render() {
                                 // debugTouchArea={true}
                                 animateTransitions={true}  
                                 thumbTouchSize={false}
-                                />
-                                
+                                />               
                         </View>
 
                         <View>
